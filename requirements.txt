@@ -1,0 +1,6 @@
+openai
+python-dotenv
+mcp
+proxies
+google-genai
+yfinance
