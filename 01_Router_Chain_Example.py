@@ -1,5 +1,4 @@
-
-
+# Imort necessary libraries
 import os
 import json
 from openai import OpenAI
@@ -64,17 +63,17 @@ def route_query(query):
     )
     
     route = response.choices[0].message.content.strip().upper()
-"""
+    """
     # Gemini Usage
-    #  We combine the system prompt and user query for Gemini
-    # Combined prompt for the Router
+    # We combine the system prompt and user query for Gemini
+
     full_prompt = f"{ROUTER_PROMPT}\n\nUser Query: {query}"
     
     # Call Model
     response = client_gemini.models.generate_content(
         model="gemini-3.1-flash-lite-preview",
         contents=full_prompt,
-        config={'temperature': 0}
+        config={'temperature': 0} # Zero temp for deterministic output
     )
     
     route = response.text.strip().upper()

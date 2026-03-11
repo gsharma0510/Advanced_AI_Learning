@@ -1,3 +1,6 @@
+# A Smart Investor Agent that uses tools to fetch stock prices and news.
+# This example demonstrates how to build an agent that can use tools natively with Google Gemini.
+# Import necessary libraries
 import os
 import json
 import yfinance as yf

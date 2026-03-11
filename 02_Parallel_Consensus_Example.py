@@ -1,6 +1,7 @@
+# Import necessary libraries
 import os
 import asyncio
-import random  # New import for generating random seeds
+import random  # for generating random seeds for each agent
 from google import genai
 from google.genai import types # Helper for configuration
 from dotenv import load_dotenv
@@ -9,6 +10,7 @@ from colorama import Fore, Style, init
 init(autoreset=True)
 load_dotenv()
 
+# Access the Google key
 client_gemini = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # --- 1. THE WORKER ---

@@ -1,3 +1,6 @@
+# A Smart Investor Agent that uses tools to fetch stock prices and news.
+# This example demonstrates how to build an agent that can use tools natively.
+# Import necessary libraries
 import os
 import json
 from openai import OpenAI
@@ -81,6 +84,7 @@ def run_native_agent(query):
         )
     ]
     
+    # Using Open AI
     """
     for turn in range(5): # Max 5 turns safety limit
         print(f"--- Turn {turn + 1} ---")

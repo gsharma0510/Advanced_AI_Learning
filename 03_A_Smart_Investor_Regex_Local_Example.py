@@ -1,6 +1,7 @@
-
-
-
+# A Smart Investor Agent that uses tools to fetch stock prices and news, with clean terminal output.
+# This example demonstrates how to build an agent that can use tools, and how to parse its actions using regex. 
+# It also shows how to maintain a clean terminal output by only printing the new thought
+# Import necessary libraries
 import os
 import re
 from openai import OpenAI
@@ -9,11 +10,8 @@ from dotenv import load_dotenv
 
 # Load API Key from .env file
 load_dotenv()
-"""
-# Open AI Client Setup
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-"""
-# Gemini Client Setup (if you want to use Gemini instead of OpenAI)
+
+# Gemini Client Setup
 client_gemini = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # --- 1. DEFINE TOOLS ---
